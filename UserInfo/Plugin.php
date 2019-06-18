@@ -2,7 +2,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /**
  * 
- 头像挂件widget
+ * 头像挂件widget
  *
  * @package UserInfo
  * @author  LittleJake
@@ -87,7 +87,7 @@ class UserInfo_Plugin implements Typecho_Plugin_Interface
     public static function getUser()
     {
         $row['display'] = Typecho_Widget::widget('Widget_Options')
-                    ->plugin('UserInfo')->display;
+                    ->plugin('UserInfo')->display == 0?false:true;
 		$row['intro'] = Typecho_Widget::widget('Widget_Options')
                     ->plugin('UserInfo')->intro;
 		$row['logo_url'] = Typecho_Widget::widget('Widget_Options')
